@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+	body {
+		font-size: 2rem;
+	}
+	
+	.whole_container {
+		width: 100%;
+		height: 100vh;
+	}
+	.top_container {
+		width: 100%;
+		height: 232px
+	}
+	.top_container button {
+		width: 48%;
+		height: 148px;
+	}
+	.content_container {
+		overflow-y: scroll;
+	}
+
+	
+	input[type="file"] {
+		font-size: 2rem;
+		height: 68px;
+		text-align: center;
+		font: Serif;
+	}
+	.file-upload {
+		margin-left: 8px;
+	}
+	.input {
+		margin: 24px 0 8px 12px;
+	}
+	
+	.highlight {
+		background-color: #ddd;
+		font-weight: bold;
+	}
+	button {
+		font-size: 1.8rem;
+		min-height: 148px;
+		max-height: 148px;
+		border-radius: 24px;
+		color: #fff;
+		border: solid 1px #fff;
+	}
+	
+	.repeat {
+		background: #333;
+	}
+	.continue {
+		background: #04AA6D;
+	}
+	
+	#content {
+		overflow-y: scroll;
+		padding: 8px;
+	}
+	
+	.sticky {
+		background: #fff;
+		top: 0;
+		position: -webkit-sticky;
+		position: sticky;	
+	}
+	</style>
+</head>
+<body>
+
+	<div class="whole_container">
+	
+		<div class="top_container sticky">
+			<div class="input">
+				<label class="file-upload">Upload txt file:</label>
+				<input type="file" id="uploaded_file" accept=".txt">
+			</div>
+			<button onclick="read(true);" class="repeat">Repeat</button>
+			<button onclick="read(false);" class="continue">Continue</button>
+		</div>
+
+		<div id="content" class="content_container"></div>
+		
+	</div>
+	
+	<script type="text/javascript" src="read.js"></script>
+	
+</body>
+</html>
